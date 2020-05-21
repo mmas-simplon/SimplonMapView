@@ -20,6 +20,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MKDirectionsApplicationSupportedModes</key>
+	<array/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>La position est obligatoire pour voir les restaurants</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>La position est obligatoire pour voir les restaurants</string>
+	<key>NSLocationUsageDescription</key>
+	<string>La position est obligatoire pour voir les restaurants</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>La position est obligatoire pour voir les restaurants</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

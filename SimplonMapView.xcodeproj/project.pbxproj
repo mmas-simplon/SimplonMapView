@@ -13,6 +13,10 @@
 		30D8E2CF2475342A0017BA99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D8E2CE2475342A0017BA99 /* Assets.xcassets */; };
 		30D8E2D22475342A0017BA99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D8E2D12475342A0017BA99 /* Preview Assets.xcassets */; };
 		30D8E2D52475342A0017BA99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D8E2D32475342A0017BA99 /* LaunchScreen.storyboard */; };
+		30D8E2DD247535020017BA99 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8E2DC247535020017BA99 /* MapView.swift */; };
+		30D8E2DF247536E40017BA99 /* RefugeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8E2DE247536E40017BA99 /* RefugeAnnotation.swift */; };
+		30D8E2E1247537710017BA99 /* Refuge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8E2E0247537710017BA99 /* Refuge.swift */; };
+		30D8E2E4247579D50017BA99 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D8E2E3247579D50017BA99 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		30D8E2D12475342A0017BA99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30D8E2D42475342A0017BA99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30D8E2D62475342A0017BA99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30D8E2DC247535020017BA99 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		30D8E2DE247536E40017BA99 /* RefugeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefugeAnnotation.swift; sourceTree = "<group>"; };
+		30D8E2E0247537710017BA99 /* Refuge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refuge.swift; sourceTree = "<group>"; };
+		30D8E2E3247579D50017BA99 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D8E2E4247579D50017BA99 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 			children = (
 				30D8E2C7247534270017BA99 /* SimplonMapView */,
 				30D8E2C6247534270017BA99 /* Products */,
+				30D8E2E2247579D50017BA99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +69,9 @@
 				30D8E2C8247534270017BA99 /* AppDelegate.swift */,
 				30D8E2CA247534270017BA99 /* SceneDelegate.swift */,
 				30D8E2CC247534270017BA99 /* ContentView.swift */,
+				30D8E2DC247535020017BA99 /* MapView.swift */,
+				30D8E2DE247536E40017BA99 /* RefugeAnnotation.swift */,
+				30D8E2E0247537710017BA99 /* Refuge.swift */,
 				30D8E2CE2475342A0017BA99 /* Assets.xcassets */,
 				30D8E2D32475342A0017BA99 /* LaunchScreen.storyboard */,
 				30D8E2D62475342A0017BA99 /* Info.plist */,
@@ -73,6 +86,14 @@
 				30D8E2D12475342A0017BA99 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30D8E2E2247579D50017BA99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30D8E2E3247579D50017BA99 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D8E2C9247534270017BA99 /* AppDelegate.swift in Sources */,
+				30D8E2E1247537710017BA99 /* Refuge.swift in Sources */,
+				30D8E2DD247535020017BA99 /* MapView.swift in Sources */,
 				30D8E2CB247534270017BA99 /* SceneDelegate.swift in Sources */,
+				30D8E2DF247536E40017BA99 /* RefugeAnnotation.swift in Sources */,
 				30D8E2CD247534270017BA99 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
