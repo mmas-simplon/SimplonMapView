@@ -15,6 +15,13 @@ class RefugeAnnotation: NSObject, MKAnnotation, Identifiable {
     var subtitle: String?
     var coordinate: CLLocationCoordinate2D
     
+    override init() {
+        self.coordinate = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+        self.title = ""
+        self.subtitle = ""
+        super.init()
+    }
+    
     init(refuge: Refuge) {
         self.title = refuge.name
         self.subtitle = refuge.adresse

@@ -24,25 +24,30 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             
-            MapView(selectedRefugeAnnotation: $selectedRefugeAnnotation, isActive: $isActive, annotations: refuges)
+            /* Lorsque la variable isActive passe à true, elle exécute la navigation automatiquement
+             
+             Pour que le code s'execute correctement, le NavigationLink doit être ecuté avant la MapView
+             
+             Inclure la MapView dans la ZStack permet d'avoir une navigation correcte
+            */
+            ZStack {
+                if selectedRefugeAnnotation != nil {
+                    NavigationLink(destination: RefugeAnnotationView(selectedRefugeAnnotation: selectedRefugeAnnotation), isActive: $isActive) {
+                        EmptyView()
+                    }
+                }
+                
+                MapView(selectedRefugeAnnotation: $selectedRefugeAnnotation, isActive: $isActive, annotations: refuges)
                 .navigationBarTitle("Refuges", displayMode: .inline)
                 .edgesIgnoringSafeArea(.all)
-                .sheet(item: $selectedRefugeAnnotation, onDismiss: {
-                    print("On dismiss")
-                }) { refugeAnnotation in
-                    Text(refugeAnnotation.title ?? "Pas de refuge")
-                        .font(.largeTitle)
-                    Text(refugeAnnotation.subtitle ?? "Pas d'adresse")
-                        .font(.headline)
-                        .foregroundColor(.red)
             }
         }
     }
 }
 
 struct RefugeAnnotationView: View {
-    @Binding var selectedRefugeAnnotation: RefugeAnnotation?
-    
+    var selectedRefugeAnnotation: RefugeAnnotation?
+
     var body: some View {
         VStack {
             Text(selectedRefugeAnnotation?.title ?? "Pas de refuge")
@@ -50,7 +55,7 @@ struct RefugeAnnotationView: View {
             Text(selectedRefugeAnnotation?.subtitle ?? "Pas d'adresse")
                 .font(.headline)
                 .foregroundColor(.red)
-        }
+        }.navigationBarTitle("\(selectedRefugeAnnotation?.title ?? "Refuge")", displayMode: .inline)
     }
 }
 
