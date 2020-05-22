@@ -17,7 +17,8 @@ struct Refuge {
     var latitude: Double
     var longitude: Double
     
-    enum RefugeType {
-        case restauration, nightClub
+    enum RefugeType: String {
+        case restauration = "restauration"
+        case nightClub = "nightClub"
     }
 }
